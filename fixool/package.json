@@ -5,19 +5,24 @@
     "@fortawesome/fontawesome-pro": "^5.15.2",
     "@frctl/fractal": "^1.5.4",
     "@frctl/twig": "^1.2.6",
+    "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
+    "npm-watch": "^0.7.0",
     "postcss": "^8.2.7",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.3"
   },
   "scripts": {
     "fractal": "fractal start --sync",
-    "build:css": "postcss src/css/styles.css -o public/css/styles.css",
+    "build:css": "postcss src/css/styles.css -o build/css/styles.css",
+    "dist:css": "postcss src/css/styles.css -o dist/css/styles.css",
     "watch": "watch 'npm run build:css' ./src/css",
-    "start": "concurrently 'npm:watch' 'npm:fractal' "
+    "start": "concurrently \"npm:watch\" \"npm:fractal\"",
+    "dist": "fractal build && npm run dist:css"
   },
   "devDependencies": {
     "concurrently": "^6.0.0",
-    "postcss-easy-import": "^3.0.0"
+    "postcss-easy-import": "^3.0.0",
+    "watch": "^1.0.2"
   }
 }
