@@ -4,6 +4,7 @@
 ### Added
 * NPM watch
 * README & CHANGLOG
+* Tailwind specific
 
 ## 0.9.0 - 2021.03.06
 ### Initial release
